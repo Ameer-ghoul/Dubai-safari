@@ -1,0 +1,89 @@
+
+import { useParams } from "react-router-dom";
+import { toursList } from "../../data";
+import Rating from "../../components/tours/Rating";
+import BookNow from "../../components/BookNow";
+import "./single-tour.css";
+
+const SingleTour = () => {
+
+    const { id } = useParams();
+    const tour = toursList.find(t => t.id === +id);
+
+    return (
+        <section className="tour">
+            <div className="tour-step">
+                United Arab Imirates <i className="bi bi-chevron-right"></i>
+                Things To Do In Dubai Safari <i className="bi bi-chevron-right"></i>
+            </div>
+            <div className="tour-category">ADVENTURE</div>
+            <h1 className="tour-title">Dubai: {tour.title}</h1>
+            <div className="tour-info">
+                <Rating rating={tour.rating} reviews={tour.reviews} />
+                <div className="tour-privider">
+                    Activity Provider : <span>Ameer Ghoul</span>
+                </div>
+            </div>
+            <div className="tour-img-wrapper">
+                <img src={tour.image} alt={tour.title} className="tour-img"></img>
+                <BookNow priceFrom={tour.priceFrom} />
+            </div>
+            <p className="tour-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis,
+                    neque soluta delectus ratione dolores quas aliquam nihil inventore numquam
+                    repellendus ullam sapiente eum maxime
+                    recusandae voluptatem sit, quisquam molestiae ad.
+                </p>
+                <div className="tour-more-information">
+                    <h2 className="tour-info-title">About this activity</h2>
+                    <div className="tour-info-item">
+                        <div className="tour-info-item-title">
+                        <i style={{color: "#27ae60"}} className="bi bi-calendar3"></i>
+                        Free Cancellation
+                        </div>
+                        <p className="tour-info-item-desc">
+                            Cancel up to 24 hours in advance to recieve a full refund
+                        </p>
+                    </div>
+                    <div className="tour-info-item">
+                        <div className="tour-info-item-title">
+                        <i style={{color: "#2980b9"}} className="bi bi-calendar-plus-fill"></i>
+                        Reservce now & pay later
+                        </div>
+                        <p className="tour-info-item-desc">
+                            Keep your travel plan flexible -- bppk your spot and pay nothing today.
+                        </p>
+                    </div>
+                    <div className="tour-info-item">
+                        <div className="tour-info-item-title">
+                        <i style={{color: "#e74c3c"}} className="bi bi-virus"></i>
+                        Covid -19 precautions
+                        </div>
+                        <p className="tour-info-item-desc">
+                            Special health and safety measures are in place. Check your activity voucher once you book for full details
+                        </p>
+                    </div>
+                    <div className="tour-info-item">
+                        <div className="tour-info-item-title">
+                        <i style={{color: "#8e44ab"}} className="bi bi-clock-history"></i>
+                       Duration 4 - 7 hours 
+                        </div>
+                        <p className="tour-info-item-desc">
+                            Check availability to see staring time.
+                        </p>
+                    </div>
+                    <div className="tour-info-item">
+                        <div className="tour-info-item-title">
+                        <i style={{color: "#2c3e50"}} className="bi bi-person-check"></i>
+                       Live tour guide 
+                        </div>
+                        <p className="tour-info-item-desc">
+                           English
+                        </p>
+                    </div>
+                </div>
+        </section>
+    )
+}
+
+export default SingleTour;

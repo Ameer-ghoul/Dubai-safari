@@ -1,0 +1,98 @@
+
+.foter{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #1a2b49;
+    flex-wrap: wrap;
+}
+
+.footer-item { 
+    color-scheme: white;
+    padding: 20px;
+}
+
+.footer-item-title { 
+    color: white;
+    margin-bottom: 21px;
+    font-size: 22px;
+    font-weight: 600;
+
+}
+
+.footer-item-list { 
+    padding: 5px;
+}
+
+.footer-item-link { 
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+.footer-item-link:hover{
+    text-decoration: underline;
+}
+
+ /* footer icons */
+
+ .footer-icons { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+ }
+
+ .footer-icons .icons { 
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+ }
+
+ .footer-icons .icons i { 
+    color: #1a2b49;
+    font-size: 32px;
+ }
+
+  /* select box */
+
+  .select-box { 
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+
+  .select-box-label { 
+    font-weight: 500;
+    margin: 7px;
+    font-size: 21px;
+  }
+
+  .select-box-input { 
+    padding: 10px 15px;
+    border: none;
+    font-size: 17px;
+    border-radius: 7px;
+    outline: none;
+  }
+
+  .footer-copy-right { 
+    color: white;
+    font-size: 17px;
+    margin-top: 25px;
+  }
+
+  @media(max-width: 720px) { 
+    .foter { 
+        flex-direction: column;
+    }
+  }
